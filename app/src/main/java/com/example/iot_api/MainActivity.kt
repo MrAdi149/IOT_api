@@ -30,11 +30,14 @@ class MainActivity : AppCompatActivity() {
         viewModel.myResponse.observe(this, Observer {response->
             Log.d("Response_is",response.toString())
             if(response.isSuccessful){
-                Log.d("Response",response.body()?.id.toString())
-                Log.d("Response",response.body()?.brand!!)
-                Log.d("Response",response.body()?.name!!)
-                Log.d("Response",response.body()?.price.toString())
+            response.body()?.forEach {
+                Log.d("Response",it.id.toString())
+                Log.d("Response",it.brand.toString())
+                Log.d("Response",it.name.toString())
+                Log.d("Response",it.price.toString())
             }
+
+                 }
 
         })
 

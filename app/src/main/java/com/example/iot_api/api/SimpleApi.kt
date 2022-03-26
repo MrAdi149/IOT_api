@@ -5,6 +5,6 @@ import retrofit2.Response
 import retrofit2.http.GET
 
 interface SimpleApi {
-    @GET("/products.json")
-    suspend fun getPost(): Response<Post>
+    @GET("products.json")
+    suspend fun getPost(): Response<List<Post>>
 }

@@ -4,5 +4,5 @@ data class Post (
     val id:Int?=null,
     val brand:String?=null,
     val name:String?=null,
-    val price:Int?=null
+    val price:String?=null
         )
