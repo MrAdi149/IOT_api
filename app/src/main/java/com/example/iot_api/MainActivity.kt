@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         viewModel= ViewModelProvider(this,viewModelFactory)[MainViewModel::class.java]
         viewModel.getPost()
         viewModel.myResponse.observe(this, Observer {response->
+            Log.d("Response_is",response.toString())
             if(response.isSuccessful){
                 Log.d("Response",response.body()?.id.toString())
                 Log.d("Response",response.body()?.brand!!)
