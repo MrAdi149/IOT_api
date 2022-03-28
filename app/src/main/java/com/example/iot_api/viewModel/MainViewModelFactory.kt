@@ -1,4 +1,4 @@
-package com.example.iot_api
+package com.example.iot_api.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
