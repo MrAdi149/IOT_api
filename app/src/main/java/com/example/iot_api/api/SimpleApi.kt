@@ -1,6 +1,7 @@
 package com.example.iot_api.api
 
 import com.example.iot_api.model.PostItem
+import com.example.iot_api.model.ProductColor
 import retrofit2.Response
 import retrofit2.http.GET
 

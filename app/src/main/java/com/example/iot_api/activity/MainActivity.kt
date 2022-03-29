@@ -24,18 +24,19 @@ class MainActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        val repository=(application as MyActivity).repository
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.recyclerView
 
-        val simpleApi=RetrofitInstance.getInstance().create(SimpleApi::class.java)
 
-        val post1Repository= Repository(simpleApi)
 
-        viewModel=ViewModelProvider(this,MainViewModelFactory(post1Repository)).get()
+        viewModel=ViewModelProvider(this,MainViewModelFactory(repository)).get(MainViewModel::class.java)
 
         viewModel.post1.observe(this,{
-            Log.d("Response","onCreate:${it.toString()})")
+            Log.d("Response","onCreate:${it.toString()}")
         })
 
     }

@@ -1,5 +1,10 @@
 package com.example.iot_api.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+
+@Entity(tableName = "postitem")
 data class PostItem(
     val api_featured_image: String,
     val brand: String,
@@ -7,6 +12,7 @@ data class PostItem(
     val created_at: String,
     val currency: Any,
     val description: String,
+    @PrimaryKey
     val id: Int,
     val image_link: String,
     val name: String,

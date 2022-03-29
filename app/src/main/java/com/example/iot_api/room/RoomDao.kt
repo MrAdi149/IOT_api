@@ -3,6 +3,8 @@ package com.example.iot_api.room
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
+import com.example.iot_api.model.Post
+import com.example.iot_api.model.PostItem
 import retrofit2.Response
 
 
@@ -10,10 +12,10 @@ import retrofit2.Response
 interface RoomDao {
 
     @Insert
-    suspend fun insertPost(post: Response<List<Post>>)
+    suspend fun insertPost(postitem: List<PostItem>)
 
 
-    @Query("SELECT * FROM post")
-    suspend fun getPost():Response<List<Post>>
+    @Query("SELECT * FROM postitem")
+    suspend fun getPost():List<PostItem>
 
 }
