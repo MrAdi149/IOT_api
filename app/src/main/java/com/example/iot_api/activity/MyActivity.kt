@@ -14,7 +14,7 @@ class MyActivity:Application() {
         val simpleApi= RetrofitInstance.getInstance().create(SimpleApi::class.java)
 
         val database=PostDatabase.getDatabase(applicationContext)
-         repository= Repository(simpleApi,database)
+         repository= Repository(simpleApi,database,applicationContext)
     }
 
 
