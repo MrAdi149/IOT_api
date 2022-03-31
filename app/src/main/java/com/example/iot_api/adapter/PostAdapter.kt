@@ -12,7 +12,7 @@ import com.example.iot_api.activity.MainActivity
 import com.example.iot_api.databinding.CardPostBinding
 import com.example.iot_api.model.PostItem
 
-class PostAdapter(mainActivity: MainActivity) :RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
+class PostAdapter:RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
 
     private var myList= emptyList<PostItem>()
 
