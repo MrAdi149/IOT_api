@@ -1,4 +1,4 @@
 /build
 
 *.idea/
-src/main/java/com.example.iot_api/util/contants.kt
+src/main/java/com/example/iot_api/util/constants.kt
