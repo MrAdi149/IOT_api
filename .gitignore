@@ -18,4 +18,4 @@ local.properties
 *.log
 *.iml
 *.idea/
-app/src/main/java/api
+app/src/main/java/com/example/iot_api/util/constants.kt
