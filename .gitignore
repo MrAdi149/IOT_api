@@ -13,3 +13,9 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+
+*.log
+*.iml
+*.idea/
+app/src/main/java/api

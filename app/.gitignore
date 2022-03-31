@@ -1,1 +1,4 @@
 /build
+
+*.idea/
+src/main/java/com.example.iot_api/api/
