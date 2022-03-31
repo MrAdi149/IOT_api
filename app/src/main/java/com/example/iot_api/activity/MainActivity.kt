@@ -25,7 +25,6 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     lateinit var viewModel: MainViewModel
-    private lateinit var recyclerView:RecyclerView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(applicationContext,key,Toast.LENGTH_LONG).show()
 
 
-val adapter=PostAdapter()
+        val adapter=PostAdapter()
         binding.recyclerView.adapter=adapter
 
         viewModel=ViewModelProvider(this,MainViewModelFactory(repository)).get(MainViewModel::class.java)
