@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/teal_700"
+    android:padding="8dp"
+    android:layout_marginTop="8dp"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+<TextView
+    android:id="@+id/tvId"
+    android:layout_width="match_parent"
+    tools:text="Hello Title"
+    android:textColor="@color/black"
+    android:textSize="20dp"
+    android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvBrand"
+        android:layout_width="match_parent"
+        tools:text="Hello Body"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        tools:text="Hello Body"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="match_parent"
+        tools:text="Hello Body"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        tools:text="Hello Body"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
