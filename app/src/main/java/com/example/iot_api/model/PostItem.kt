@@ -11,5 +11,6 @@ data class PostItem(
     val id: Int,
     val image_link: String,
     val name: String,
-    val price: String
+    val price: String,
+    val brand:String
 )

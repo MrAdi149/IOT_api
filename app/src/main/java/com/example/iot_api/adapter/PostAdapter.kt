@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.iot_api.R
 import com.example.iot_api.activity.MainActivity
 import com.example.iot_api.databinding.CardPostBinding
@@ -38,11 +39,21 @@ class PostAdapter(mainActivity: MainActivity) :RecyclerView.Adapter<PostAdapter.
 
     class PostViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
 
+
+        val tvPrice:TextView=itemView.findViewById(R.id.tvPrice)
+        val image: ImageView= itemView.findViewById(R.id.imageView)
+        val tvId: TextView= itemView.findViewById(R.id.tvId)
+        val tvName:TextView=itemView.findViewById(R.id.tvName)
+        val tvDescription:TextView=itemView.findViewById(R.id.tvDescription)
+        val tvBrand:TextView=itemView.findViewById(R.id.tvBrand)
         fun bind(postItem: PostItem){
-            val image: ImageView= itemView.findViewById(R.id.imageView)
-            val tvId: TextView= itemView.findViewById(R.id.tvId)
-            val tvName:TextView=itemView.findViewById(R.id.tvName)
-            val tvDescription:TextView=itemView.findViewById(R.id.tvDescription)
+
+            tvBrand.text=postItem.brand
+            tvName.text=postItem.name
+            tvDescription.text=postItem.description
+            tvPrice.text=postItem.price
+            Glide.with(tvName.context).load(postItem.image_link).into(image)
+
         }
     }
 

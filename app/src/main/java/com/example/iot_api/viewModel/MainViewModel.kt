@@ -9,11 +9,23 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class MainViewModel(private val repository: Repository):ViewModel() {
-    init {
+//    init {
+//        viewModelScope.launch(Dispatchers.IO) {
+//            repository.getPost()
+//        }
+//    }
+//    val post1: PostItem
+//    get()=repository.insertPost(post1)
+
+    fun getPost(): LiveData<List<PostItem>>{
+        return repository.getPost()
+    }
+    fun insertPost(postItem: List<PostItem>){
         viewModelScope.launch(Dispatchers.IO) {
-            repository.getPost1()
+            for (i in postItem){
+                repository.insertPost(i)
+            }
         }
     }
-    val post1: LiveData<List<PostItem>>
-    get() = repository.post2
+
 }
