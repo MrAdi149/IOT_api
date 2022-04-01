@@ -26,10 +26,8 @@ android {
     }
 
     buildTypes {
-
         debug{
             buildConfigField 'String',"ApiKey", MY_API_KEY
-//           resValue 'String',"ApiKey", KEY
         }
         release {
             minifyEnabled false
